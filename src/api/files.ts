@@ -88,7 +88,7 @@ export const createApi = (router: Router) => {
     //   return res.sendStatus(400);
     // }
 
-    const file = { text: req.params.text, ready: false };
+    const file = { text: req.body.text, ready: false };
 
     Storage.upload(file).then(data => {
       return data ? res.send(data._id) : res.sendStatus(400);
