@@ -84,9 +84,9 @@ export const createApi = (router: Router) => {
   router.post('/api/v1/files', function(req, res) {
     const src = req.files && req.files.file as UploadedFile;
 
-    if (!src) {
-      return res.sendStatus(400);
-    }
+    // if (!src) {
+    //   return res.sendStatus(400);
+    // }
 
     const file = { text: req.params.text, ready: false };
 
