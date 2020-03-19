@@ -48,7 +48,7 @@ export const createApi = (router: Router) => {
   });
   
   router.get('/api/v1/files/unhandled', function(req, res) {
-    Storage.findItems({ }).then(items => res.send(items.filter(i => !!i && !(i as unknown as IFile).ready)[0]));
+    Storage.findItem({ ready: false }).then(item => res.send(item));
   });
   
   router.get('/api/v1/files', function(req, res) {
