@@ -36,7 +36,7 @@ export const remove = (id: string) => {
 };
 
 export const findItem = async (data: {}) => {
-  return model.findOne(data).then(user => safe(user));
+  return model.findOne(data).then(user => safe(user)).catch(() => Promise.reject());
 };
 
 export const findItems = async (data: {}) => {
