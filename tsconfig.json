@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "baseUrl": "src",
+    "outDir": "server",
+    "lib": [
+      "es6",
+      "es2017.object",
+      "dom"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react"
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "src/app",
+    "src/common",
+    "src/components",
+    "src/assets",
+    "src/pages",
+    "src/rest",
+    "src/store",
+    "src/styled",
+    "src/styles",
+    "src/index.tsx",
+    "src/react-app-env.d.ts",
+    "src/serviceWorker.ts"
+  ]
+}
