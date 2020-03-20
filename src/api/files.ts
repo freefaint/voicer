@@ -24,7 +24,7 @@ export const createApi = (router: Router) => {
 
   router.get('/files/:id', function(req, res) {
     Storage.get(req.params.id).then(file => {
-      if (!file) {
+      if (!file || !file.data) {
         return res.sendStatus(404);
       }
       
